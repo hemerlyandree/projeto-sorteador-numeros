@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Numbers | Sorteador de Números</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="bg-pattern" aria-hidden="true"></div>
+
+    <header class="logo">
+      <span class="logo__icon" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="9" r="7" fill="currentColor"/>
+          <circle cx="16" cy="23" r="7" fill="currentColor"/>
+          <circle cx="9" cy="16" r="7" fill="currentColor" fill-opacity="0.5"/>
+          <circle cx="23" cy="16" r="7" fill="currentColor" fill-opacity="0.5"/>
+        </svg>
+      </span>
+      <span class="logo__text">NUMBERS</span>
+    </header>
+
+    <main class="content">
+      <section class="hero">
+        <p class="hero__tag">ONLINE — GRATUITO</p>
+        <h1 class="hero__title">
+          SORTEADOR<br />
+          DE NÚMEROS
+        </h1>
+
+        <ul class="faq">
+          <li class="faq__item">
+            <span class="faq__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="17" cy="14" r="3" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M8 11v3M17 17v1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <div class="faq__text">
+              <p class="faq__question">Como funciona o sorteador de números?</p>
+              <p class="faq__answer">
+                O sorteador utiliza um algoritmo de geração aleatória para criar
+                números dentro do intervalo especificado pelo usuário.
+              </p>
+            </div>
+          </li>
+
+          <li class="faq__item">
+            <span class="faq__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="17" cy="14" r="3" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M8 11v3M17 17v1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <div class="faq__text">
+              <p class="faq__question">Posso escolher o intervalo dos números?</p>
+              <p class="faq__answer">
+                Sim, você pode definir os valores mínimo e máximo para o
+                intervalo dos números sorteados.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="card-title">
+        <h2 id="card-title" class="card__title">QUERO SORTEAR:</h2>
+        <p class="card__description">
+          Defina o intervalo e a quantidade de números, clique em "Sortear" e veja
+          os resultados na tela. É rápido e fácil!
+        </p>
+
+        <div class="fields">
+          <div class="field">
+            <label for="quantidade">NÚMEROS</label>
+            <input type="number" id="quantidade" name="quantidade" value="2" min="1" inputmode="numeric" />
+          </div>
+          <div class="field">
+            <label for="min">DE</label>
+            <input type="number" id="min" name="min" value="1" inputmode="numeric" />
+          </div>
+          <div class="field">
+            <label for="max">DE</label>
+            <input type="number" id="max" name="max" value="100" inputmode="numeric" />
+          </div>
+        </div>
+
+        <label class="toggle">
+          <input type="checkbox" id="naoRepetir" checked />
+          <span class="toggle__track" aria-hidden="true">
+            <span class="toggle__thumb"></span>
+          </span>
+          <span class="toggle__label">Não repetir número</span>
+        </label>
+
+        <button type="button" id="btnSortear" class="btn-sortear">
+          SORTEAR
+          <span class="btn-sortear__arrow" aria-hidden="true">→</span>
+        </button>
+
+        <div id="resultado" class="resultado" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
